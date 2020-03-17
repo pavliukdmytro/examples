@@ -5,6 +5,9 @@ html{
 	font-size: 16px;
 	line-height: 1.5;
 }
+body{
+	margin: 0px auto;
+}
 ul {
 	margin: 0; /* Отступ слева в браузере IE и Opera */
 	padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
@@ -12,10 +15,10 @@ ul {
 		list-style-type: none; /* Убираем маркеры */
 	}
 }
-body{
-	margin: 0px auto;
-}
 //form element
+input{
+	-webkit-tap-highlight-color: transparent;
+}
 select, input, textarea{
 	outline: none;
 	border-style: none;
@@ -23,6 +26,8 @@ select, input, textarea{
 }
 button{
 	border: none;
+	-webkit-tap-highlight-color: transparent;
+	user-select: none;
 }
 button:active, button:focus {
 	outline: none;
