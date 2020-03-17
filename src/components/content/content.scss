@@ -1,0 +1,83 @@
+.content{
+	& > img{
+		display: block;
+	}
+	img{
+		max-width: 100%;
+	}
+	ul{
+		padding-left: 40px;
+		li{
+			position: relative;
+			&:before{
+				content: '';
+				position: absolute;
+				width: 5px;
+				height: 5px;
+				background-color: black;
+				border-radius: 50%;
+				left: -15px;
+				top: 10px;
+				line-height: 1.5;
+			}
+		}
+	}
+	a{
+		text-decoration: underline;
+		&:hover{
+			text-decoration: unset;
+		}
+	}
+	blockquote{
+		font-style:italic;
+		color: #555555;
+		border-left:8px solid #78C0A8;
+		line-height:1.6;
+		padding:1.2em 30px 1.2em 40px;
+		position: relative;
+		background-color: #f5f5f5;
+		&::before{
+			font-family:Arial;
+			content: "\201C";
+			color:#78C0A8;
+			font-size:4em;
+			position: absolute;
+			left: 0px;
+			top:-10px;
+		}
+		@media (min-width: 375px) {
+			padding:1.2em 30px 1.2em 75px;
+			&::before{
+				left: 10px;
+			}
+		}
+	}
+	table{
+		display: block;
+		border-collapse: collapse;
+		text-align: center;
+		overflow-x: auto;
+		th, td{
+			border: 1px solid black;
+			padding: 10px 20px;
+		}
+		th{
+			background-color: #cebebe;
+		}
+		tr{
+			background-color: #e8e6e6;
+			&:nth-child(2n){
+				background-color: white;
+			}
+		}
+	}
+	p, ul, ol, table, blockquote, & > img{
+		margin-bottom: 1.5rem;
+	}
+	abbr{
+		text-decoration: double underline;
+		&:hover{
+			cursor: help;
+		}
+	}
+}
