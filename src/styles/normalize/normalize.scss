@@ -1,5 +1,6 @@
 *, *:before, *:after{
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 html{
 	font-size: 16px;
@@ -16,17 +17,27 @@ ul {
 	}
 }
 //form element
-input{
-	-webkit-tap-highlight-color: transparent;
-}
 select, input, textarea{
 	outline: none;
-	border-style: none;
-	border: none;
+}
+textarea{
+	resize: none;
+}
+input[type="button"]:active,
+input[type="submit"]:active{
+	outline: none;
+	border-color: inherit;
+}
+input[type="button"]:focus,
+input[type="submit"]:focus{
+	box-shadow: none;
+	border-style: solid;
+}
+input[type=search]::-ms-clear, input[type=search]::-ms-reveal {
+	display: none;
 }
 button{
 	border: none;
-	-webkit-tap-highlight-color: transparent;
 	user-select: none;
 }
 button:active, button:focus {
@@ -49,6 +60,11 @@ input[type=number]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
+//input[type="number"]:hover,
+//input[type="number"]:focus {
+//	-moz-appearance: number-input;
+//}
+
 //text
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0px;
@@ -61,7 +77,6 @@ a:hover,  /* при наведении */
 a {
 	text-decoration: none;
 	color: inherit;
-	-webkit-tap-highlight-color: transparent;
 	word-break: break-word;
 }
 a:focus{

@@ -1,0 +1,33 @@
+.radio {
+	display: none;
+}
+.radio + label{
+	position: relative;
+}
+.radio + label:before{
+	content: '';
+	display: inline-flex;
+	width: 16px;
+	height: 16px;
+	border: 1px solid black;
+	border-radius: 50%;
+	margin-right: 10px;
+	position: relative;
+	top: 2px;
+}
+.radio + label:after{
+	content: '';
+	display: inline-flex;
+	width: 10px;
+	height: 10px;
+	background-color: black;
+	border-radius: 50%;
+	position: absolute;
+	left: 3px;
+	top: 4px;
+	transform: scale(0);
+	transition: .3s transform linear;
+}
+.radio:checked + label:after {
+	transform: scale(1);
+}

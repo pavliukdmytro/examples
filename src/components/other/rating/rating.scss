@@ -1,0 +1,42 @@
+[data-yam-rating]{
+	//width: 110px;
+	display: inline-flex;
+	justify-content: flex-start;
+	input[type="radio"]{
+		display: none;
+	}
+	svg{
+		fill: yellow;
+		width: 25px;
+		height: 25px;
+		transition: 0.5s transform linear;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	label {
+		height: 25px;
+	}
+	.active ~ svg {
+		fill: #bebfc1;
+	}
+	.active ~ label {
+		svg {
+			fill: #bebfc1;
+		}
+	}
+}
+[data-yam-rating=true]:hover {
+	svg {
+		fill: yellow;
+	}
+	svg:hover{
+		transform: translateY(-1px) scale(1.1);
+	}
+	svg:hover ~ svg{
+		fill: #bebfc1;
+	}
+	label:hover ~ label svg {
+		fill: #bebfc1;
+	}
+}

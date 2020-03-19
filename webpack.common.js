@@ -64,6 +64,10 @@ module.exports = {
 			template: 'src/pages/content.html',
 			filename: "content.html"
 		}),
+		new HtmlWebpackPlugin({
+			template: 'src/pages/form.html',
+			filename: "form.html"
+		}),
 		new CleanWebpackPlugin()
 	]
 };

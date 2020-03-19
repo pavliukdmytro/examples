@@ -1,0 +1,66 @@
+[data-yam-counter]{
+	position: relative;
+	display: inline-flex;
+	border: 1px solid #999999;
+	.minus, .plus{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+	}
+	.minus{
+		left: 8px;
+	}
+	.plus{
+		right: 8px;
+	}
+	input{
+		//width: 100%;
+		//border: 1px solid #999999;
+		width: 80px;
+		height: 37px;
+		padding-left: 20px;
+		padding-right: 20px;
+		text-align: center;
+	}
+	svg{
+		fill: #999999;
+		width: 15px;
+		height: 15px;
+		//position: absolute;
+	}
+}
+.error-message{
+	background-color: red;
+	position: absolute;
+	padding: 6px 10px;
+	width: 140px;
+	//@include font-size(13);
+	color: #ffffff;
+	//font-family: $font1;
+	font-size: 13px;
+	font-weight: 300;
+	top: calc(-100% - 30px);
+	left: 0px;
+	display: none;
+	&:after{
+		content: '';
+		border: 8px solid transparent;
+		border-color: transparent red red transparent;
+		display: block;
+		width: 8px;
+		position: absolute;
+		right: unset;
+		bottom: -7px;
+		left: 3px;
+		transform: rotate(45deg);
+	}
+	@media (min-width: 639px){
+		right: 0px;
+		left: auto;
+		&:after{
+			right: 3px;
+			left: unset;
+		}
+	}
+}
