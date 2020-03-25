@@ -24,6 +24,9 @@ select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	&:hover{
+		cursor: pointer;
+	}
 }
 textarea{
 	resize: none;
