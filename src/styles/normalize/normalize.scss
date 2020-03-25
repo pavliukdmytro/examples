@@ -20,6 +20,11 @@ ul {
 select, input, textarea{
 	outline: none;
 }
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
 textarea{
 	resize: none;
 }
