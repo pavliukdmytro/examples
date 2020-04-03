@@ -68,3 +68,4 @@ if(counters.length) {
 		counter.start(element)
 	})
 }
+//alert(123123);

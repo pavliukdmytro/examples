@@ -43,6 +43,7 @@
 	top: calc(-100% - 30px);
 	left: 0px;
 	display: none;
+	z-index: 2;
 	&:after{
 		content: '';
 		border: 8px solid transparent;
